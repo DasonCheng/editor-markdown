@@ -1,0 +1,328 @@
+html {
+    font-size: 10px;
+}
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 48px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    background-color: #efefef;
+}
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+    background-color: #fff;
+}
+.downpull,
+.upload {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #666;
+    background-color: #efefef;
+    /*letter-spacing: 2px;*/
+}
+#scroller section {
+    width: 100%;
+}
+#footer {
+    position: absolute;
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 48px;
+    padding: 0;
+    border-top: 1px solid #ccc;
+    background: #fff;
+    color: #eee;
+    text-align: center;
+    overflow: hidden;
+}
+#footer a {
+    color: #666;
+}
+#footer a em {
+    display: block;
+    height: 25px;
+    padding-top: 2px;
+}
+#footer a em>span {
+    font-size: 2.4rem;
+}
+#footer a>span {
+    font-size: 1.2rem;
+}
+#footer a.active {
+    color: #FF679A;
+}
+.section {
+    background-color: #f2f2f2;
+}
+.section header nav {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+    background-color: #fff;
+}
+.section header nav a {
+    color: #666;
+}
+.section header nav a span {
+    position: relative;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    font-size: 1.4rem;
+}
+.section header nav a.active {
+    color: #333;
+}
+.section header nav a.active span:before {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #FF679A;
+}
+.section header .search-box {
+    position: relative;
+    padding: .6rem 12px .6rem 0;
+    background-color: #fff;
+}
+.section header .search-box .input-group,
+.section header .search-box .input-group .input-group-btn {
+    position: static;
+}
+.section header .search-box .input-group-btn .btn.active {
+    color: #FF679A;
+}
+.section header .search-box .input-group-btn .btn {
+    height: 24px;
+    padding: 0 12px;
+    margin-bottom: 0;
+    border-color: transparent;
+    font-size: 1.4rem;
+    line-height: 24px;
+    text-align: center;
+    text-decoration: none;
+    color: #666;
+}
+.section header .search-box .btn:focus {
+    outline: none;
+}
+.section header .search-box .input-group .input-group-btn .btn.active .glyphicon {
+    transform: translate3D(0,2px,0) rotate(180deg);
+}
+.section header .search-box .input-group .input-group-btn ul.dropdown-menu {
+    top: 34px;
+    width: 100%;
+    padding: 5px 0;
+    margin: 0;
+    font-size: 1.4rem;
+    border: none;
+    border-radius: 0;
+}
+.section header .search-box .input-group .input-group-btn ul.dropdown-menu li a {
+    padding: 1rem 12px;
+}
+.section header .search-box .input-group .form-control:last-child {
+    height: 24px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    background-color: #E3E4E6;
+    border-color: transparent;
+    outline: none;
+}
+.section header .search-box .form-control:focus {
+    border:none;
+    outline: none;
+}
+.section header .search-box .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    height: 1.4rem;
+    margin-top: -.7rem;
+    font-size: 1.4rem;
+    z-index: 10;
+    color: #999;
+}
+/*banner*/
+.sliderBanner {
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.sliderBanner ol {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    z-index: 15;
+    width: 60%;
+    padding: 0;
+    margin-left: -30%;
+    margin-bottom: 0;
+    text-align: center;
+    list-style: none;
+}
+.sliderBanner ol li {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 1px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0);
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+.sliderBanner ol li.active {
+    width: 12px;
+    height: 12px;
+    margin: 0;
+    background-color: rgba(255,255,255,1);
+}
+.sliderBanner ul {
+    position: relative;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.sliderBanner ul li {
+    display: none;
+    width: 100%;
+}
+.sliderBanner ul li a,
+.sliderBanner ul li img {
+    display: block;
+    width: 100%;
+}
+.sliderBanner ul li.prev,
+.sliderBanner ul li.active,
+.sliderBanner ul li.next {
+    display: block;
+}
+.sliderBanner ul li.prev,
+.sliderBanner ul li.next {
+    position: absolute;
+    top: 0;
+}
+.sliderBanner ul li.prev {
+    left: -100%;
+}
+.sliderBanner ul li.next {
+    left: 100%;
+}
+.section section>h3 {
+    position: relative;
+    padding: .6rem 10px .6rem 6px;
+    margin: 0;
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+.section section>h3 span {
+    display: block;
+    padding-left: 4px;
+    border-left: 3px solid #FF679A;
+    font-size: 1.4rem;
+    font-weight: normal;
+    color: #333;
+}
+.section section .goods-list a {
+    display: block;
+    background-color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #f2f2f2;
+}
+.section section .goods-list a:nth-child(2n+1) {
+    border-right: 1px solid #f2f2f2;
+}
+.section section .goods-list a dl {
+    margin-bottom: .8rem;
+}
+.section section .goods-list a dl dt {
+    position: relative;
+    padding: 1.8rem 0;
+    text-align: center;
+}
+.section section .goods-list a dl dt img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+}
+.section section .goods-list a dl dt.sell-out:before {
+    content: "已抢光";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-top: -50px;
+    margin-left: -50px;
+    border-radius: 100px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 1.4rem;
+    color: #fff;
+    background-color: rgba(0,0,0,.7);
+}
+.section section .goods-list a dl dd {
+    position: relative;
+    font-size: 1.1rem;
+    color: #999;
+}
+.section section .goods-list a dl dd h3 {
+    padding-bottom: .6rem;
+    margin: 0;
+    border-bottom: 1px solid #f2f2f2;
+    font-size: 1.4rem;
+    color: #333;
+}
+.section section .goods-list a dl dd strong {
+    position: relative;
+    top: 0;
+    left: -4px;
+    display: block;
+    padding: .8rem 0;
+    font-size: 1.6rem;
+    color: #FE6699;
+}
+.section section .goods-list a dl dd span {
+    position: absolute;
+    bottom: .8rem;
+    right: 0;
+    font-size: 1.2rem;
+    color: #666;
+}
+em {
+    font-style: normal;
+}
+.section section .goods-list a dl dd span em {
+    color: #FE6699;
+}
