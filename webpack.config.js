@@ -5,7 +5,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 module.exports = {
   entry: './app/entry/index.js',
   output: {
-    filename: 'swiper-banner.js',
+    filename: 'editor-markdown.js',
     path: path.resolve(__dirname, 'dist')
   },
   module: {
@@ -45,7 +45,7 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin({
       sourceMap: true
     }),
-    new ExtractTextPlugin("swiper-banner.css"),
+    new ExtractTextPlugin("editor-markdown.css"),
     new webpack.BannerPlugin(`
         Author  :   DasonCheng
         Email   :   dasoncheng@outlook.com
